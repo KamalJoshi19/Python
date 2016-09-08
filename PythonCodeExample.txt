@@ -1,0 +1,148 @@
+answer = raw_input("Ask anything from the user and take the inpur")
+
+
+
+suitcase = [] 
+suitcase.append("sunglasses")
+
+# Your code here!
+suitcase.append("kit")
+suitcase.append("git")
+suitcase.append("bag")
+
+
+
+list_length = len(suitcase) # Set this to the length of suitcase
+
+print "There are %d items in the suitcase." % (list_length)
+print suitcase
+
+
+
+animals = ["aardvark", "badger", "duck", "emu", "fennec fox"]
+duck_index = animals.index("duck")    # Use index() to find "duck"
+
+# Your code here!
+animals.insert(duck_index, "cobra")
+
+
+
+
+Dictionary -
+
+residents = {'Puffin' : 104, 'Sloth' : 105, 'Burmese Python' : 106}
+
+print residents['Puffin'] # Prints Puffin's room number
+
+# Your code here!
+print residents['Sloth']
+print residents['Burmese Python']
+
+
+
+menu = {} # Empty dictionary
+menu['Chicken Alfredo'] = 14.50 # Adding new key-value pair
+print menu['Chicken Alfredo']
+
+# Your code here: Add some dish-price pairs to menu!
+menu['Chichen Kadhai'] = 180
+menu['Chichen lolypop'] = 200
+menu['Mutton Korma'] = 310
+
+
+Range and functions - 
+
+def my_function(x):
+    for i in range(0, len(x)):
+        x[i] = x[i] * 2
+    return x
+
+print my_function([0, 1, 2]) # Add your range between the parentheses!
+
+
+
+To print ramdom numbers -
+
+import random
+
+print "Lucky Numbers! 3 numbers will be generated."
+print "If one of them is a '5', you lose!"
+
+count = 0
+while count < 3:
+    num = random.randint(1, 6)
+
+
+########################Create a for loop that prompts the user for a hobby 3 times, then appends each one to hobbie
+
+hobbies = []
+
+# Add your code below!
+for i in range(3):
+    raw_input("Enter your hobby")
+    hobbies.append(i)
+
+
+####################### Creating runtime index for the list ##############
+choices = ['pizza', 'pasta', 'salad', 'nachos']
+
+print 'Your choices are:'
+for index, item in enumerate(choices):
+    print index, item
+
+
+################When you want to compare two list, you use zip function#######
+
+list_a = [3, 9, 17, 15, 19]
+list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90]
+
+for a, b in zip(list_a, list_b):
+    # Add your code here!
+
+
+
+
+###############Python code to reverse a string#####################
+def reverse(text):
+    rev_text = []
+    text_len = len(text)
+    while text_len >0:
+        rev_text.append(text[text_len-1])
+        text_len -=1
+        print text_len
+        end_text = ''.join(rev_text)
+        print end_text
+    return end_text
+
+reverse("Kamal")
+    
+
+############### Anti Vowel##################
+def anti_vowel(test):
+    test1=[]
+    for char in test:
+        if char != 'a' and char!='e' and char!='i' and char!='o' and char!='u' and char != 'A' and char!='E' and char!='I' and char!='O' and char!='U':
+            test1.append(char)    
+    print test1
+    return ''.join(test1)
+
+############## Replacing the word from other word #################
+text = "please censor me"
+word = "censor"
+
+def censor(text,word):
+    wordlist = text.split()
+    for i in range(0,len(wordlist)):
+        if wordlist[i] == word:
+            wordlist[i] = "*" * len(word)
+    return ' '.join(wordlist)
+
+#####################Write a function called median that takes a list as an input and returns the median value of the list.For example: median([1,1,2]) should return 1.#####
+
+def median(no):
+    no = sorted(no)
+    if len(no) % 2 != 0:
+        return no[(len(no)-1)/2]
+    else:
+        return (no[(len(no)/2)-1] + no[len(no)/2]) /2.0
+
